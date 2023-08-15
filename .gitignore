@@ -1,0 +1,26 @@
+# Unity specific
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+Assets/AssetStoreTools*
+
+# Visual Studio / MonoDevelop
+.vscode/
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.unityproj
+*.csproj
+*.pidb
+*.sln.DotSettings
+
+# Rider
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
