@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb { get; private set; }
     private Vector2 workspace;
     public Vector2 CurrentVelocity { get; private set; }
+    public int FacingDirection { get; private set; }
 
     private void Awake()
     {
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour
         Anim = GetComponent<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
         rb = GetComponent<Rigidbody2D>();
+        FacingDirection = 1;
 
         StateMachine.Initialize(IdleState);
     }
@@ -57,5 +59,19 @@ public class Player : MonoBehaviour
         workspace.Set(CurrentVelocity.x, velocity);
         rb.velocity = workspace;
         CurrentVelocity = workspace;
+    }
+
+    public void CheckIfShouldFlip(int xInput)
+    {
+        if(xInput != 0 && xInput != FacingDirection)
+        {
+            Flip();
+        }
+    }
+
+    private void Flip()
+    {
+        FacingDirection *= -1;
+        transform.Rotate(0.0f, 180.0f, 0.0f);
     }
 }
