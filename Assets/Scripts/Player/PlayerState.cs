@@ -10,6 +10,9 @@ public class PlayerState
     protected float startTime;
     private string animBoolName;
 
+    protected int xInput;
+    protected int yInput;
+
     public PlayerState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName)
     {
         this.player = player;
@@ -21,12 +24,22 @@ public class PlayerState
     public virtual void Enter()
     {
         DoChecks();
+        player.Anim.SetBool(animBoolName, true);
         startTime = Time.time;
     }
     
-    public virtual void Exit() { }
+    public virtual void Exit()
+    {
+        player.Anim.SetBool(animBoolName, false);
+    }
 
-    public virtual void LogicUpdate() { }
+    public virtual void LogicUpdate()
+    {
+        xInput = player.InputHandler.NormInputX;
+        yInput = player.InputHandler.NormInputY;
+        player.SetVelocityX(playerData.movementVelocity * xInput);
+        player.SetVelocityY(playerData.movementVelocity * yInput);
+    }
 
     public virtual void PhysicsUpdate()
     {

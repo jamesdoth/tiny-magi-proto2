@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public PlayerIdleState IdleState { get; private set; }
     public PlayerMoveState MoveState { get; private set; }
 
+    public Animator Anim { get; private set; }
+
     [SerializeField]
     private PlayerData playerData;
 
@@ -25,6 +27,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        Anim = GetComponent<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
         rb = GetComponent<Rigidbody2D>();
 

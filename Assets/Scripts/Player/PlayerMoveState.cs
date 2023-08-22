@@ -1,11 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class PlayerMoveState : PlayerState
 {
-    protected int xInput;
-    protected int yInput;
     public PlayerMoveState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -29,14 +23,9 @@ public class PlayerMoveState : PlayerState
     {
         base.LogicUpdate();
 
-        xInput = player.InputHandler.NormInputX;
-        yInput = player.InputHandler.NormInputY;
-        player.SetVelocityX(playerData.movementVelocity *  xInput);
-        player.SetVelocityY(playerData.movementVelocity * yInput);
-
-        if(xInput != 0)
+        if(xInput == 0 && yInput == 0)
         {
-            stateMachine.ChangeState(player.MoveState);
+            stateMachine.ChangeState(player.IdleState);
         }
     }
 

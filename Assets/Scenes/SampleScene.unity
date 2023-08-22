@@ -211,7 +211,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8.4375
+  orthographic size: 4.52
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -235,7 +235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.69, y: -0.07, z: -10}
+  m_LocalPosition: {x: -1.98, y: -0.54, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -623,6 +623,7 @@ GameObject:
   - component: {fileID: 1636654668}
   - component: {fileID: 1636654667}
   - component: {fileID: 1636654666}
+  - component: {fileID: 1636654669}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -649,7 +650,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &1636654663
 BoxCollider2D:
@@ -737,7 +738,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636654661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.69, y: -0.07, z: 0}
+  m_LocalPosition: {x: -1.98, y: -0.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -815,6 +816,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 5bdfe3e4997ce7b4dad8a2e399a9ce18, type: 2}
+--- !u!95 &1636654669
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636654661}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7f643fc1328ca5646b8695e2128dc461, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2031671757
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,7 +891,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1636654665}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 8.4375
+    OrthographicSize: 4.52
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
