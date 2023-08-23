@@ -35,4 +35,10 @@ public class Entity : MonoBehaviour
         workspace.Set(facingDirection * velocity, rb.velocity.y);
         rb.velocity = workspace;
     }
+
+    public virtual void Flip()
+    {
+        facingDirection *= -1;
+        aliveGO.transform.Rotate(0f, 180f, 0f);
+    }
 }
