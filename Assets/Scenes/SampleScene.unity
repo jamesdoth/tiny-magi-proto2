@@ -777,7 +777,7 @@ Rigidbody2D:
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -946,6 +946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 5bdfe3e4997ce7b4dad8a2e399a9ce18, type: 2}
+  FacingRight: 0
 --- !u!95 &1636654669
 Animator:
   serializedVersion: 4

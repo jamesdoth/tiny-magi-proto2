@@ -10,8 +10,6 @@ public class PlayerAim : MonoBehaviour
     private Vector3 worldMousePos;
     private Vector3 rotation;
 
-    public int FacingDirection { get; private set; } = 1;
-
     void Start()
     {
         GameObject mainCamObject = GameObject.FindGameObjectWithTag("MainCamera");

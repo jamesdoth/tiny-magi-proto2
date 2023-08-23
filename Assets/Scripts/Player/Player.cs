@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb { get; private set; }
     private Vector2 workspace;
     public Vector2 CurrentVelocity { get; private set; }
-    public bool FacingRight;
+    private bool FacingRight;
     private Vector3 mousePos;
 
     private void Awake()
@@ -26,8 +26,6 @@ public class Player : MonoBehaviour
         StateMachine = new PlayerStateMachine();
         IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
         MoveState = new PlayerMoveState(this, StateMachine, playerData, "move");
-
-        FacingRight = true;
     }
 
     private void Start()
@@ -36,6 +34,7 @@ public class Player : MonoBehaviour
         InputHandler = GetComponent<PlayerInputHandler>();
         rb = GetComponent<Rigidbody2D>();
 
+        FacingRight = true;
         StateMachine.Initialize(IdleState);
     }
 
