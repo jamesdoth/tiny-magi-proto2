@@ -34,16 +34,5 @@ public class PlayerAim : MonoBehaviour
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
 
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
-
-/*        float mouseXDiff = mousePos.x - transform.position.x;
-
-        if (mouseXDiff > 0 && FacingDirection == -1)
-        {
-            Flip();
-        }
-        else if (mouseXDiff < 0 && FacingDirection == 1)
-        {
-            Flip();
-        }*/
     }
 }

@@ -23,8 +23,6 @@ public class PlayerMoveState : PlayerState
     {
         base.LogicUpdate();
 
-        //player.CheckIfShouldFlip(xInput);
-
         if(xInput == 0 && yInput == 0)
         {
             stateMachine.ChangeState(player.IdleState);
