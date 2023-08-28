@@ -113,14 +113,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5c6ca4d4052e424aa8322c242d7138a
-      internalID: 683571870
+      spriteID: 35fc8d32db7e0f94ab3c6d52af59c99b
+      internalID: 1236607778
       vertices: []
       indices: 
       edges: []
@@ -134,14 +134,14 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00f0f72d29950c84fa5a65c40588c576
-      internalID: -1876457775
+      spriteID: ac9870d4b8bbee44793249a74f6b6753
+      internalID: 1203049806
       vertices: []
       indices: 
       edges: []
@@ -157,8 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      EnemySkeleton-Idle_0: 683571870
-      EnemySkeleton-Idle_1: -1876457775
+      EnemySkeleton-Idle_0: 1236607778
+      EnemySkeleton-Idle_1: 1203049806
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
